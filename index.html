@@ -1,102 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USD Finance Token (USDTF)</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            color: #212529;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #1f8f4e;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        main {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-        h1, h2 {
-            color: #1f8f4e;
-        }
-        section {
-            margin-bottom: 30px;
-        }
-        a {
-            color: #1f8f4e;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #e9ecef;
-            font-size: 0.9em;
-            color: #495057;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>USDTF BEP20 – USD Pegged Token</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9f8;
+      color: #1f2933;
+    }
+    header {
+      background: #0f3d2e;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+    header p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: #0f3d2e;
+      border-bottom: 2px solid #d4af37;
+      padding-bottom: 6px;
+    }
+    .box {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .label {
+      font-weight: bold;
+      color: #0f3d2e;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #0f3d2e;
+      color: white;
+      margin-top: 60px;
+    }
+    a {
+      color: #0f3d2e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>USD Finance Token (USDTF)</h1>
-        <p>BEP‑20 Token on the BNB Smart Chain</p>
-    </header>
 
-    <main>
-        <section id="about">
-            <h2>About USDTF</h2>
-            <p>
-                USDTF is a BEP‑20 experimental token deployed on the BNB Smart Chain.
-                It is used for decentralized finance testing, smart contract interaction, 
-                and liquidity pool experimentation. The token operates without any peg, 
-                guarantee, or promise of value and is maintained for educational and 
-                development purposes only.
-            </p>
-        </section>
+<header>
+  <h1>USDTF BEP20</h1>
+  <p>USD-Pegged Token on BNB Chain</p>
+</header>
 
-        <section id="features">
-            <h2>Key Features</h2>
-            <ul>
-                <li>Fully BEP‑20 standard token</li>
-                <li>Active liquidity pool on PancakeSwap</li>
-                <li>Transparent and auditable on-chain transactions</li>
-                <li>Designed for experimentation and DeFi testing</li>
-                <li>No rebasing or supply manipulation mechanisms</li>
-            </ul>
-        </section>
+<section>
+  <h2>Overview</h2>
+  <div class="box">
+    <p>
+      <strong>USDTF</strong> is a BEP20 token deployed on BNB Chain, designed to
+      maintain a <strong>1:1 peg with the US Dollar</strong> through on-chain liquidity mechanisms.
+    </p>
+    <p>
+      The project focuses on transparency, stability, and verifiable smart contracts.
+    </p>
+  </div>
+</section>
 
-        <section id="contract">
-            <h2>Contract & Explorer</h2>
-            <p>Token contract address: <a href="https://bscscan.com/token/0x4028E1E613eEE7ceaB20071C266cfcA554E44890" target="_blank">View on BscScan</a></p>
-            <p>Liquidity pool: <a href="https://pancakeswap.finance/info/pool/0x6b5cfa51a32cb93aff9144235ab69712625e3c4b" target="_blank">View on PancakeSwap</a></p>
-        </section>
+<section>
+  <h2>Token Information</h2>
+  <div class="box">
+    <p><span class="label">Token Name:</span> USDTF BEP20</p>
+    <p><span class="label">Symbol:</span> USDTF</p>
+    <p><span class="label">Blockchain:</span> BNB Chain (BEP20)</p>
+    <p><span class="label">Decimals:</span> 18</p>
+    <p><span class="label">Contract:</span><br>
+      <!-- INSERISCI QUI IL CONTRATTO USDTF -->
+    </p>
+  </div>
+</section>
 
-        <section id="contact">
-            <h2>Contact & Source</h2>
-            <p>Repository: <a href="https://github.com/nensailimited-hash/usdtf" target="_blank">GitHub</a></p>
-            <p>Telegram: <a href="https://t.me/JDCNcoin" target="_blank">@JDCNcoin</a></p>
-        </section>
-    </main>
+<section>
+  <h2>Peg Mechanism</h2>
+  <div class="box">
+    <p>
+      USDTF is designed to maintain a 1:1 value with the US Dollar through on-chain
+      liquidity mechanisms.
+    </p>
+    <p>
+      The peg is supported by decentralized liquidity pools, where USDTF can be exchanged
+      directly against USD-denominated stable assets.
+    </p>
+    <p>
+      When the market price deviates from 1 USD, arbitrage opportunities naturally
+      incentivize market participants to buy or sell USDTF on decentralized exchanges,
+      helping restore the peg.
+    </p>
+    <p>
+      All liquidity and price data are fully transparent and verifiable on-chain.
+    </p>
+  </div>
+</section>
 
-    <footer>
-        <p>&copy; 2026 USD Finance Token. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+<section>
+  <h2>Transparency</h2>
+  <div class="box">
+    <p>
+      All smart contracts are open-source and publicly available.
+    </p>
+    <p>
+      Liquidity is managed on-chain and visible through decentralized exchanges and
+      CoinGecko Terminal.
+    </p>
+    <p>
+      🔗 GitHub:
+      <a href="https://github.com/nensalimited-hash" target="_blank">
+        https://github.com/nensalimited-hash
+      </a>
+    </p>
+  </div>
+</section>
 
-    </div>
+<section>
+  <h2>Community & Links</h2>
+  <div class="box">
+    <p>
+      📘 Facebook:
+      <a href="https://www.facebook.com/usdtf/" target="_blank">
+        facebook.com/usdtf
+      </a>
+    </p>
+    <p>
+      ▶ YouTube:
+      <a href="https://www.youtube.com/@USDFinanceTokenUSDTF" target="_blank">
+        youtube.com/@USDFinanceTokenUSDTF
+      </a>
+    </p>
+    <p>
+      💼 LinkedIn:
+      <a href="https://www.linkedin.com/company/usdtf" target="_blank">
+        linkedin.com/company/usdtf
+      </a>
+    </p>
+  </div>
+</section>
 
-</div>
+<footer>
+  © 2026 USDTF BEP20 – All rights reserved
+</footer>
+
 </body>
 </html>
