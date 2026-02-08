@@ -1,166 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>USDTF BEP20 – USD Pegged Token</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f9f8;
-      color: #1f2933;
-    }
-    header {
-      background: #0f3d2e;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-    }
-    header p {
-      font-size: 18px;
-      opacity: 0.9;
-    }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h2 {
-      color: #0f3d2e;
-      border-bottom: 2px solid #d4af37;
-      padding-bottom: 6px;
-    }
-    .box {
-      background: white;
-      border-radius: 8px;
-      padding: 20px;
-      margin-top: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    .label {
-      font-weight: bold;
-      color: #0f3d2e;
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #0f3d2e;
-      color: white;
-      margin-top: 60px;
-    }
-    a {
-      color: #0f3d2e;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>USDTF – Institutional Digital Asset Overview</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="USDT Finance Token is an experimental BEP-20 digital asset on BNB Smart Chain designed to study price stability mechanisms in decentralized environments.">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f2f4f6;
+            color: #2a2a2a;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        header img {
+            max-width: 180px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 34px;
+            font-weight: 600;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 22px;
+            font-weight: 600;
+            color: #0f8f5f;
+            position: relative;
+            padding-bottom: 6px;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 2px;
+            background: #d4af37;
+            margin-top: 4px;
+        }
+
+        .subtitle {
+            margin-top: 12px;
+            color: #5f6b6d;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background: linear-gradient(180deg, #ffffff, #f9fbfc);
+            border: 1px solid #d4af37;
+            border-radius: 14px;
+            padding: 25px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+        }
+
+        .card p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        iframe {
+            width: 100%;
+            height: 320px;
+            border: 2px solid #0f8f5f;
+            border-radius: 12px;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .highlight {
+            background: #f7faf9;
+            border-left: 4px solid #0f8f5f;
+            padding: 15px 18px;
+            border-radius: 8px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .links a {
+            color: #0f8f5f;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 70px;
+            text-align: center;
+            font-size: 14px;
+            color: #7a7a7a;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1024px) {
+            h1 { font-size: 30px; }
+            h2 { font-size: 20px; }
+            .subtitle { font-size: 15px; }
+            iframe { height: 280px; }
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            h1 { font-size: 28px; }
+            h2 { font-size: 18px; }
+            .subtitle { font-size: 14px; }
+            .card { padding: 20px; }
+            iframe { height: 250px; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 24px; }
+            h2 { font-size: 16px; }
+            .subtitle { font-size: 13px; }
+            .card { padding: 15px; }
+            iframe { height: 220px; }
+        }
+    </style>
 </head>
+
 <body>
+<div class="container">
 
-<header>
-  <h1>USDTF BEP20</h1>
-  <p>USD-Pegged Token on BNB Chain</p>
-</header>
+    <header>
+        <img src="Nuovo LOgo.png" alt="USDTF Logo">
+        <h1>USDTF</h1>
+        <div class="subtitle">
+            Experimental Digital Asset · BNB Smart Chain<br>
+            Institutional-Style Market Monitoring
+        </div>
+    </header>
 
-<section>
-  <h2>Overview</h2>
-  <div class="box">
-    <p>
-      <strong>USDTF</strong> is a BEP20 token deployed on BNB Chain, designed to
-      maintain a <strong>1:1 peg with the US Dollar</strong> through on-chain liquidity mechanisms.
-    </p>
-    <p>
-      The project focuses on transparency, stability, and verifiable smart contracts.
-    </p>
-  </div>
-</section>
+    <div class="grid">
+        <div class="card">
+            <h2>Project Overview</h2>
+            <p>
+                USDTF is an experimental BEP-20 digital asset developed to explore
+                decentralized mechanisms aimed at maintaining price reference
+                to USD within blockchain environments.
+            </p>
+            <div class="highlight">
+                USDTF is <strong>not a traditional stablecoin</strong> and does not
+                represent a claim on fiat currency. Focused on market-driven stabilization research.
+            </div>
+        </div>
 
-<section>
-  <h2>Token Information</h2>
-  <div class="box">
-    <p><span class="label">Token Name:</span> USDTF BEP20</p>
-    <p><span class="label">Symbol:</span> USDTF</p>
-    <p><span class="label">Blockchain:</span> BNB Chain (BEP20)</p>
-    <p><span class="label">Decimals:</span> 18</p>
-    <p><span class="label">Contract:</span><br>
-      <!-- INSERISCI QUI IL CONTRATTO USDTF -->
-    </p>
-  </div>
-</section>
+        <div class="card">
+            <h2>Stability Approach</h2>
+            <p>
+                Design philosophy aims to maintain value reference close to <strong>1 USD</strong>,
+                through liquidity dynamics and decentralized price discovery.
+            </p>
+            <ul>
+                <li>No centralized issuer</li>
+                <li>No fiat-backed reserves</li>
+                <li>Market-driven valuation</li>
+                <li>Transparent on-chain data</li>
+            </ul>
+        </div>
+    </div>
 
-<section>
-  <h2>Peg Mechanism</h2>
-  <div class="box">
-    <p>
-      USDTF is designed to maintain a 1:1 value with the US Dollar through on-chain
-      liquidity mechanisms.
-    </p>
-    <p>
-      The peg is supported by decentralized liquidity pools, where USDTF can be exchanged
-      directly against USD-denominated stable assets.
-    </p>
-    <p>
-      When the market price deviates from 1 USD, arbitrage opportunities naturally
-      incentivize market participants to buy or sell USDTF on decentralized exchanges,
-      helping restore the peg.
-    </p>
-    <p>
-      All liquidity and price data are fully transparent and verifiable on-chain.
-    </p>
-  </div>
-</section>
+    <div class="grid">
+        <div class="card">
+            <h2>Global Digital Asset Context</h2>
+            <iframe src="https://www.tradingview.com/widgetembed/?symbols=BINANCE:BTCUSDT,BINANCE:ETHUSDT,BINANCE:BNBUSDT&interval=D&theme=light"></iframe>
+        </div>
 
-<section>
-  <h2>Transparency</h2>
-  <div class="box">
-    <p>
-      All smart contracts are open-source and publicly available.
-    </p>
-    <p>
-      Liquidity is managed on-chain and visible through decentralized exchanges and
-      CoinGecko Terminal.
-    </p>
-    <p>
-      🔗 GitHub:
-      <a href="https://github.com/nensalimited-hash" target="_blank">
-        https://github.com/nensalimited-hash
-      </a>
-    </p>
-  </div>
-</section>
+        <div class="card">
+            <h2>Positioning</h2>
+            <p>
+                USDTF is intentionally positioned as an
+                <strong>experimental financial instrument</strong>,
+                clearly distinct from centralized stablecoin issuers such as Tether.
+            </p>
+            <div class="highlight">
+                Independent and unaffiliated with any centralized stablecoin provider.
+            </div>
+        </div>
+    </div>
 
-<section>
-  <h2>Community & Links</h2>
-  <div class="box">
-    <p>
-      📘 Facebook:
-      <a href="https://www.facebook.com/usdtf/" target="_blank">
-        facebook.com/usdtf
-      </a>
-    </p>
-    <p>
-      ▶ YouTube:
-      <a href="https://www.youtube.com/@USDFinanceTokenUSDTF" target="_blank">
-        youtube.com/@USDFinanceTokenUSDTF
-      </a>
-    </p>
-    <p>
-      💼 LinkedIn:
-      <a href="https://www.linkedin.com/company/usdtf" target="_blank">
-        linkedin.com/company/usdtf
-      </a>
-    </p>
-  </div>
-</section>
+    <div class="grid">
+        <div class="card">
+            <h2>USDTF – GeckoTerminal Analytics</h2>
+            <iframe src="https://www.geckoterminal.com/bsc/pools/0x6b5cfa51a32cb93aff9144235ab69712625e3c4b"></iframe>
+        </div>
 
-<footer>
-  © 2026 USDTF BEP20 – All rights reserved
-</footer>
+        <div class="card">
+            <h2>DEX Overview</h2>
+            <iframe src="https://dex.coinmarketcap.com/token/bsc/0x4028e1e613eee7ceab20071c266cfca554e44890/"></iframe>
+        </div>
 
+        <div class="card">
+            <h2>Technical Information</h2>
+            <ul>
+                <li><strong>Network:</strong> BNB Smart Chain</li>
+                <li><strong>Token Standard:</strong> BEP-20</li>
+                <li><strong>Initial Supply:</strong> 100,000,000</li>
+                <li><strong>Contract (Proxy):</strong><br>
+                    0x4028E1E613eEE7ceaB20071C266cfcA554E44890
+                </li>
+            </ul>
+            <div class="links" style="margin-top:15px;">
+                <a href="https://bscscan.com/token/0x4028E1E613eEE7ceaB20071C266cfcA554E44890" target="_blank">View on BscScan</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 USDTF — Experimental & Educational Project<br>
+        This website provides read-only informational content and does not constitute financial advice or stablecoin issuance.
+    </footer>
+
+</div>
 </body>
-</html>
+</html
